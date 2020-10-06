@@ -1,0 +1,17 @@
+.media-control {
+  border:.05rem;
+  outline: none;
+  transition: none;
+  color: #5755d9;
+  background: transparent;
+  cursor: pointer;
+  display: table-cell; vertical-align: middle;
+}
+
+.media-control:hover {
+  color: #4644d5;
+}
+
+.player-name {
+  text-transform: capitalize;
+}
