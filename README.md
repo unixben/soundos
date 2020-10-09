@@ -1,6 +1,8 @@
 # SoundOs
 Sonos Web Controller
 
+![SoundOs](static/screenshot.png)
+
 ## Introduction
 I wanted a simple and easy to use Sonos controller for Linux. The ones available generally didn't work the way I wanted them to, so I set out to create this.
 
@@ -24,7 +26,9 @@ pip3 install soco flask
 ./soundos.sh
 ```
 ### Docker
-Build the image with the [Dockerfile](Dockerfile) and use the included [docker-compose.yml](docker-compose.yml) file
+Build the image with the [Dockerfile](Dockerfile) and use the included [docker-compose.yml](docker-compose.yml) file.
+
+Because multicast is unsupported in a container (without fancy plugins like Weave), the docker-compose.yml requires `network_mode: host`
 
 ## Things Left To Do
 - [ ] Music search
@@ -34,4 +38,4 @@ Build the image with the [Dockerfile](Dockerfile) and use the included [docker-c
 - [ ] Volume control
 - [ ] System information
 - [ ] Dark mode
-- [X] Dockerfile and docker-compose.yml
+- [x] Dockerfile and docker-compose.yml
