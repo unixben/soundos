@@ -1,0 +1,13 @@
+version: "3"
+services:
+    soundos:
+        container_name: soundos
+        image: "localhost:5000/soundos:latest"
+        restart: unless-stopped
+        network_mode: host
+        ports:
+            - "9933:9933"
+        environment:
+            - PYTHONUNBUFFERED=TRUE
+        volumes:
+            - "/etc/localtime:/etc/localtime:ro"
